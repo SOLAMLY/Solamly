@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--CollapsingToolbarLayout 或 Toolbar 无论使用哪个都必须将其置于AppBarLayout 第一个子VIew -->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!-- 添加 app:layout_collapseMode="parallax"
+           配合下面的toolBar-->
+            <ImageView
+                android:id="@+id/iv_custom_behavior_cover"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:visibility="visible"
+                app:layout_collapseMode="parallax" />
+
+            <!--添加   android:layout_height="?android:attr/actionBarSize"
+            可以添加标题文字，并且改标题文字会随着滑动而进行相应的改变-->
+            <!--添加  app:layout_collapseMode="pin"
+            固定toolbar在 顶部不滑动-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_custom_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:visibility="gone"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_info_personal_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabMaxWidth="200dp"
+            app:tabMinWidth="60dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/VI">
+
+        </android.support.design.widget.TabLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+
+    <!--  添加： app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            目的是响应滚动-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_custom_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <!--注意：这里需要加上： app:behavior_peekHeight="0dp" 默认隐藏了 -->
+    <!--若不加上，可能会发生  隐藏/显示  切换不了-->
+    <LinearLayout
+        android:id="@+id/bottom_custom_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二" />
+    </LinearLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|right"-->
+    <!--app:layout_scrollFlags="scroll|enterAlways|snap" />-->
+    <!--app:layout_behavior="@string/scale_down_show_behavior"-->
+</android.support.design.widget.CoordinatorLayout>

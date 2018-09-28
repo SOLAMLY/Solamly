@@ -1,0 +1,46 @@
+package com.example.solamly.solamly.module.XmlAnalysis;
+
+/**
+ * @Author SOLAMLY
+ * @Date 2018/9/17 11:27
+ * @Description:
+ */
+
+public class StudentBean {
+    private String name;
+    private String sex;
+    private String nickName;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentBean{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", nickName='" + nickName + '\'' +
+                '}';
+    }
+}

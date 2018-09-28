@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/json_array"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Json Array解析"/>
+    <Button
+        android:id="@+id/json_object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Json Object解析"/>
+
+    <Button
+        android:id="@+id/json_object_array"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Json Object_Array解析"/>
+
+    <Button
+        android:id="@+id/xml_dom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xml dom解析"/>
+    <Button
+        android:id="@+id/xml_sax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xml sax解析"/>
+</LinearLayout>

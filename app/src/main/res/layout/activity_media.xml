@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#434343" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        >
+
+
+    </WebView>
+    <TextView
+        android:id="@+id/text"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/seletced_image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#434343"
+        android:gravity="center"
+        android:text="插入图片"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</RelativeLayout>

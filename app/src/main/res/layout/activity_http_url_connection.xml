@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_marginTop="50dp"
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入URL"/>
+
+    <Button
+        android:id="@+id/btn_free"
+        android:text="HTTP 请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_post"
+        android:text="HTTP POST请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_get"
+        android:text="HTTP GET请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_okhttp"
+        android:text="OK HTTP POST请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_get_okhttp"
+        android:text="OK HTTP GET请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_image"
+        android:text="OK HTTP 图片上传"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_file"
+        android:text="OK HTTP 文件上传"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_retrofit"
+        android:text="Retrofit 请求"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_retrofit_pramars"
+        android:text="Retrofit 上传多文件"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_post_retrofit_upload"
+        android:text="Retrofit 上传文件"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

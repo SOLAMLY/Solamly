@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.solamly.solamly">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--实现知乎首页-->
+        <activity android:name=".ui.activity.CustomBehaviorActivity"/>
+        <activity android:name=".ui.activity.FrameActivity"/>
+        <activity android:name=".ui.activity.MRichEditorActivity"/>
+        <activity android:name=".ui.activity.MediaActivity"/>
+        <activity android:name=".ui.activity.MediaRealeaseActivity"/>
+        <activity android:name=".ui.activity.EditorActivity"/>
+        <activity android:name=".ui.EditText.EditTextMainActivity"/>
+        <activity android:name=".module.sqlite.SqliteActivity"/>
+        <activity android:name=".module.greendao.GreenDaoActivity"/>
+        <activity android:name=".module.http_url_client.HttpActivity"/>
+        <activity android:name=".module.rxjava_retrofit.RxJavaMainActivity"/>
+        <activity android:name=".module.dagger.DaggerMainActivity"/>
+        <activity android:name=".module.XmlAnalysis.JsonXmlActivity"/>
+        <activity android:name=".module.handler.HandlerMainActivity"/>
+        <activity android:name=".module.AsyncTask.AsyncTaskActivity"/>
+        <activity android:name=".module.service.ServiceActivity"/>
+       <activity android:name=".module.design_mode.factory.FactoryActivity"/>
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service android:name=".module.service.TestService" />
+    </application>
+
+</manifest>

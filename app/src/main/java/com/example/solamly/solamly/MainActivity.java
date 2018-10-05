@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import com.example.solamly.solamly.Base.BaseActivity;
 import com.example.solamly.solamly.module.AsyncTask.AsyncTaskActivity;
 import com.example.solamly.solamly.module.XmlAnalysis.JsonXmlActivity;
+import com.example.solamly.solamly.module.baidu_map.BaiduMapActivity;
 import com.example.solamly.solamly.module.dagger.DaggerMainActivity;
 import com.example.solamly.solamly.module.design_mode.factory.FactoryActivity;
 import com.example.solamly.solamly.module.greendao.GreenDaoActivity;
@@ -44,7 +45,8 @@ public class MainActivity extends BaseActivity {
             "Handler",
             "AsyncTask",
             "Service",
-            "Factory"
+            "Factory",
+            "百度地图"
     };
     @Override
     protected int setLayout() {
@@ -139,6 +141,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 skip(FactoryActivity.class, null);
+            }
+        });
+        relativeLayout.getChildAt(11).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skip(BaiduMapActivity.class, null);
             }
         });
     }

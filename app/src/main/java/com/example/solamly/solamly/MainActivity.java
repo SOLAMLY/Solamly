@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.solamly.entry.BuliderBean;
 import com.example.solamly.solamly.module.AsyncTask.AsyncTaskActivity;
 import com.example.solamly.solamly.module.XmlAnalysis.JsonXmlActivity;
 import com.example.solamly.solamly.module.baidu_map.BaiduMapActivity;
@@ -149,6 +150,12 @@ public class MainActivity extends BaseActivity {
                 skip(BaiduMapActivity.class, null);
             }
         });
+        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skip(BaiduMapActivity.class, null);
+            }
+        });
     }
     
 
@@ -164,6 +171,13 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onClick(View view) {
-
+        BuliderBean.Builder buliderBean = new  BuliderBean.Builder();
+        buliderBean
+                .name("")
+                .isOk(true)
+                .build();
+        buliderBean
+                .sex(5)
+                .build();
     }
 }

@@ -150,12 +150,12 @@ public class MainActivity extends BaseActivity {
                 skip(BaiduMapActivity.class, null);
             }
         });
-        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(BaiduMapActivity.class, null);
-            }
-        });
+//        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                skip(BaiduMapActivity.class, null);
+//            }
+//        });
     }
     
 

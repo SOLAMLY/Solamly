@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.solamly.solamly.Base.BaseActivity;
 import com.example.solamly.solamly.R;
+import com.example.solamly.solamly.ui.EditText.ResizeLinearLayout;
 import com.example.solamly.solamly.ui.weight.RichEditText;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;

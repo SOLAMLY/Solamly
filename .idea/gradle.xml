@@ -5,10 +5,12 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="F:/SOLAMLY/gradle-3.5-all/gradle-3.5" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../gradle-3.5" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/BaseModule" />
+            <option value="$PROJECT_DIR$/MusicModule" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

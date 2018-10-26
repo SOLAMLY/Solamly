@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaseModule/BaseModule.iml" filepath="$PROJECT_DIR$/BaseModule/BaseModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MusicModule/MusicModule.iml" filepath="$PROJECT_DIR$/MusicModule/MusicModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/Solamly.iml" filepath="$PROJECT_DIR$/Solamly.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

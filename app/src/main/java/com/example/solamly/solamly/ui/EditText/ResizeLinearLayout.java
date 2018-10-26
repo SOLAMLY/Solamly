@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.ui.activity;
+package com.example.solamly.solamly.ui.EditText;
 
 import android.content.Context;
 import android.util.AttributeSet;

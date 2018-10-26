@@ -84,6 +84,14 @@ public class CustomBehaviorActivity extends BaseActivity {
         layoutParams.setMargins(0, statusBarHeight, 0, 0);
 
 
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
+        list.add("aaa");
         adapter = new CustomBehaviorAdapter(list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);

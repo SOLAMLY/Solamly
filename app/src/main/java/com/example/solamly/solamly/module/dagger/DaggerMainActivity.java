@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.example.solamly.solamly.Base.BaseActivity;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.module.dagger.component.DaggerHttpComponse;
 
 import javax.inject.Inject;
 
@@ -29,7 +28,7 @@ public class DaggerMainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-      DaggerHttpComponse.builder().build().inject(this);
+//      DaggerHttpComponse.builder().build().inject(this);
       Log.i(TAG_DAGGER,okHttpClient.hashCode() + "");
 
     }

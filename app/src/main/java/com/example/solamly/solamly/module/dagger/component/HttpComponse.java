@@ -11,7 +11,7 @@ import dagger.Component;
  * @Description:
  */
 
-@Component(modules = { HttpModule.class})
+@Component(modules = HttpModule.class)
 public interface HttpComponse {
    void inject(DaggerMainActivity activity);
 }

@@ -36,7 +36,7 @@ public class RetrofitUtil {
     private static final String BaseUrl = "http://fz.meibbc.com/";
     private static final String BaseUrlUpload = "http://120.78.88.242:9080/";
 
-    public static void initRetrofit() {
+    public static void initRetrofit2() {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(new LoggerInterceptor())
                 .build();

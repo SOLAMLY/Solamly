@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.example.solamly.solamly.Base.BaseActivity;
 import com.example.solamly.solamly.R;
@@ -36,6 +37,7 @@ import butterknife.OnClick;
  * @Description:
  */
 
+@Route(path = "/activity/CustomBehaviorActivity")
 public class CustomBehaviorActivity extends BaseActivity {
     private final String TAG = this.getClass().getSimpleName();
 

@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
-
 android {
     compileSdkVersion 25
     buildToolsVersion "27.0.3"
@@ -11,6 +10,17 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //配置ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+//                arguments = [app: project.getName()]
+                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+
+            }
+        }
+
+
     }
     buildTypes {
         release {
@@ -41,8 +51,10 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 
+    //配置ARouter
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
     compile files('libs/BaiduLBS_Android.jar')
-    compile project(':MusicModule')
-    compile project(':BaseModule')
+    compile project(':Module_Music')
+    compile project(':Module_Base')
 }

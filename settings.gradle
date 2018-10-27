@@ -1,1 +1,1 @@
-include ':app', ':MusicModule', ':BaseModule'
+include ':app', ':Module_Music', ':Module_Base'

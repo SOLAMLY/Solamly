@@ -9,8 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/BaseModule" />
-            <option value="$PROJECT_DIR$/MusicModule" />
+            <option value="$PROJECT_DIR$/Module_Base" />
+            <option value="$PROJECT_DIR$/Module_Music" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

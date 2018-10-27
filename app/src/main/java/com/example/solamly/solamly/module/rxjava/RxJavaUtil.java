@@ -230,12 +230,12 @@ public class RxJavaUtil {
 //                .subscribe(new Consumer<LoginResponse>() {
 //                    @Override
 //                    public void accept(LoginResponse loginResponse) throws Exception {
-//                        Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MusicMainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
 //                    }
 //                }, new Consumer<Throwable>() {
 //                    @Override
 //                    public void accept(Throwable throwable) throws Exception {
-//                        Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MusicMainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
 //                    }
 //                });
 //    }

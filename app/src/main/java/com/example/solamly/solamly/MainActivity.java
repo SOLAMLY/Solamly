@@ -20,6 +20,7 @@ import com.example.solamly.solamly.module.rxjava_retrofit.RxJavaMainActivity;
 import com.example.solamly.solamly.module.service.ServiceActivity;
 import com.example.solamly.solamly.ui.activity.CustomBehaviorActivity;
 import com.example.solamly.solamly.ui.activity.MediaRealeaseActivity;
+import com.solamly.module_music.view.activity.MusicMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +48,8 @@ public class MainActivity extends BaseActivity {
             "AsyncTask",
             "Service",
             "Factory",
-            "百度地图"
+            "百度地图",
+            "音乐"
     };
     @Override
     protected int setLayout() {
@@ -150,12 +152,12 @@ public class MainActivity extends BaseActivity {
                 skip(BaiduMapActivity.class, null);
             }
         });
-//        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                skip(BaiduMapActivity.class, null);
-//            }
-//        });
+        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skip(MusicMainActivity.class, null);
+            }
+        });
     }
     
 

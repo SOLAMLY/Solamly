@@ -28,6 +28,7 @@ public class DaggerMainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
 //      DaggerHttpComponse.builder().build().inject(this);
       Log.i(TAG_DAGGER,okHttpClient.hashCode() + "");
 

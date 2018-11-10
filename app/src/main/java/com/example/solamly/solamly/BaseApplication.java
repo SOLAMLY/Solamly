@@ -9,7 +9,7 @@ import com.baidu.mapapi.SDKInitializer;
 import com.example.solamly.solamly.module.greendao.GreenDaoManager;
 import com.example.solamly.solamly.module.rxjava_retrofit.NetManager;
 
-import static com.example.solamly.solamly.module.http_url_client.Retrofit.RetrofitUtil.initRetrofit2;
+import static com.example.solamly.solamly.module.network.Retrofit.RetrofitUtil.initRetrofit2;
 import static com.solamly.module_music.retrofit.RetrofitConfig.initRetrofit;
 
 

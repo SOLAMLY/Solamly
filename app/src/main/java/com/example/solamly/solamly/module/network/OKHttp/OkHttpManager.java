@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.module.http_url_client.OKHttp;
+package com.example.solamly.solamly.module.network.OKHttp;
 
 import android.os.Handler;
 

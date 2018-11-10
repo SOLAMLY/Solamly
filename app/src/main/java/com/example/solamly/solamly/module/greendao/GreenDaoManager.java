@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.solamly.solamly.module.download.FileBean;
 import com.greendao.gen.DaoMaster;
 import com.greendao.gen.DaoSession;
 import com.greendao.gen.UserBeanDao;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class GreenDaoManager {
 
-    private static final String DB_NAME = "data.db";
+    private static final String DB_NAME = "datas.db";
 
     private static DaoSession daoSession;
     //    private static DaoMaster.DevOpenHelper helper;
@@ -163,5 +164,58 @@ public class GreenDaoManager {
 
     public static DaoSession getDaoSession() {
         return daoSession;
+    }
+
+    /**
+     * 存储文件下载进度
+     * @param mFileBean
+     */
+    public static void saveFileSchedule(FileBean mFileBean){
+        List<FileBean> datas = daoSession.getFileBeanDao().loadAll();
+        if (datas == null || datas.size() <= 0){
+            daoSession.getFileBeanDao().insert(mFileBean);
+        }else {
+            for (FileBean mBean : datas) {
+                if (mBean.getUrl().equals(mFileBean.getUrl())) {
+                    daoSession.getFileBeanDao().update(mFileBean);
+                    return;
+                } else {
+                    daoSession.getFileBeanDao().insert(mFileBean);
+                }
+            }
+        }
+
+    }
+
+
+    /**
+     * 根据Url 获取文件信息
+     * @param path
+     * @return
+     */
+    public static FileBean getFileBean(String path){
+        List<FileBean> mFileBeanList = daoSession.getFileBeanDao().loadAll();
+        Log.e("文件信息：", String.valueOf(mFileBeanList));
+        for (FileBean mBean :mFileBeanList){
+            if (path.equals(mBean.getUrl())){
+                return mBean;
+            }
+        }
+        return null;
+    }
+
+
+    /**
+     * 删除某条任务
+     * @param path
+     */
+    public static void deletedFileBean(String path){
+        List<FileBean> mFileBeanList = daoSession.getFileBeanDao().loadAll();
+        Log.e("TAG", String.valueOf(mFileBeanList));
+        for (FileBean mBean :mFileBeanList){
+            if (path.equals(mBean.getUrl())){
+                daoSession.getFileBeanDao().deleteInTx(mBean);
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.module.http_url_client.download;
+package com.example.solamly.solamly.module.network.download;
 
 /**
  * @Author SOLAMLY

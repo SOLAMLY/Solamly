@@ -2,8 +2,8 @@ package com.example.solamly.solamly.module.rxjava;
 
 import android.util.Log;
 
-import com.example.solamly.solamly.module.http_url_client.Retrofit.Api;
-import com.example.solamly.solamly.module.http_url_client.Retrofit.CommentBean;
+import com.example.solamly.solamly.module.network.Retrofit.Api;
+import com.example.solamly.solamly.module.network.Retrofit.CommentBean;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -33,7 +33,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.example.solamly.solamly.module.http_url_client.Retrofit.RetrofitUtil.getRetrofit;
+import static com.example.solamly.solamly.module.network.Retrofit.RetrofitUtil.getRetrofit;
 
 /**
  * @Author SOLAMLY

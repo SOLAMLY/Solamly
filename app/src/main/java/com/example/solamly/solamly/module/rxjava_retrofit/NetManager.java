@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.module.rxjava_retrofit;
 
-import com.example.solamly.solamly.module.http_url_client.OKHttp.LoggerInterceptor;
+import com.example.solamly.solamly.module.network.OKHttp.LoggerInterceptor;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

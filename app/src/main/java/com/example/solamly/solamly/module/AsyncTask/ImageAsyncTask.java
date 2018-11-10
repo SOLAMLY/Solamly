@@ -8,7 +8,7 @@ import android.util.Log;
 import com.example.solamly.solamly.Util.imageloader.BitmapUtil;
 import com.example.solamly.solamly.Util.imageloader.LruCacheUtil;
 import com.example.solamly.solamly.Util.MeasurementUtil;
-import com.example.solamly.solamly.module.http_url_client.HttpUtil;
+import com.example.solamly.solamly.module.network.HttpUtil;
 
 import java.util.Arrays;
 

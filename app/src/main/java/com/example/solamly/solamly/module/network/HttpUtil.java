@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.module.http_url_client;
+package com.example.solamly.solamly.module.network;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

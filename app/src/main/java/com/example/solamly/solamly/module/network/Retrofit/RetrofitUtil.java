@@ -1,10 +1,10 @@
-package com.example.solamly.solamly.module.http_url_client.Retrofit;
+package com.example.solamly.solamly.module.network.Retrofit;
 
 import android.util.Log;
 import android.widget.Toast;
 
 import com.example.solamly.solamly.BaseApplication;
-import com.example.solamly.solamly.module.http_url_client.OKHttp.LoggerInterceptor;
+import com.example.solamly.solamly.module.network.OKHttp.LoggerInterceptor;
 
 import java.io.File;
 import java.io.IOException;

@@ -13,9 +13,10 @@ import com.example.solamly.solamly.module.XmlAnalysis.JsonXmlActivity;
 import com.example.solamly.solamly.module.baidu_map.BaiduMapActivity;
 import com.example.solamly.solamly.module.dagger.DaggerMainActivity;
 import com.example.solamly.solamly.module.design_mode.factory.FactoryActivity;
+import com.example.solamly.solamly.module.download.DownloadActivity;
 import com.example.solamly.solamly.module.greendao.GreenDaoActivity;
 import com.example.solamly.solamly.module.handler.HandlerMainActivity;
-import com.example.solamly.solamly.module.http_url_client.HttpActivity;
+import com.example.solamly.solamly.module.network.HttpActivity;
 import com.example.solamly.solamly.module.rxjava_retrofit.RxJavaMainActivity;
 import com.example.solamly.solamly.module.service.ServiceActivity;
 import com.example.solamly.solamly.ui.activity.CustomBehaviorActivity;
@@ -49,8 +50,10 @@ public class MainActivity extends BaseActivity {
             "Service",
             "Factory",
             "百度地图",
-            "音乐"
+            "音乐",
+            "断点续传"
     };
+
     @Override
     protected int setLayout() {
         return R.layout.activity_main;
@@ -85,6 +88,8 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 skip(CustomBehaviorActivity.class, null);
+//                skip(SeekBarTestActivity.class, null);
+
             }
         });
         relativeLayout.getChildAt(1).setOnClickListener(new View.OnClickListener() {
@@ -140,7 +145,8 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 skip(ServiceActivity.class, null);
             }
-        });    relativeLayout.getChildAt(10).setOnClickListener(new View.OnClickListener() {
+        });
+        relativeLayout.getChildAt(10).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 skip(FactoryActivity.class, null);
@@ -158,13 +164,19 @@ public class MainActivity extends BaseActivity {
                 skip(MusicMainActivity.class, null);
             }
         });
+        relativeLayout.getChildAt(13).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skip(DownloadActivity.class, null);
+            }
+        });
     }
-    
+
 
     public String getTextName(int i) {
 
         for (int j = 0; j < length.length; j++) {
-            if (j == i){
+            if (j == i) {
                 return length[j];
             }
         }
@@ -173,7 +185,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onClick(View view) {
-        BuliderBean.Builder buliderBean = new  BuliderBean.Builder();
+        BuliderBean.Builder buliderBean = new BuliderBean.Builder();
         buliderBean
                 .name("")
                 .isOk(true)

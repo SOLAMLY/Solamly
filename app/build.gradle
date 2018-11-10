@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 25
     buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.example.solamly.solamly"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -19,8 +20,14 @@ android {
 
             }
         }
+    }
 
-
+    greendao {
+        schemaVersion 21//数据库版本号
+        daoPackage 'com.greendao.gen'//设置DaoMaster、DaoSession、Dao包名
+        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+        //targetGenDirTest：设置生成单元测试目录
+        //generateTests：设置自动生成单元测试用例
     }
     buildTypes {
         release {
@@ -33,6 +40,7 @@ android {
     dataBinding {
         enabled = true
     }
+
 
 }
 
@@ -53,6 +61,8 @@ dependencies {
 
     //配置ARouter
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    //GreenDao
+    compile 'org.greenrobot:greendao:3.2.2'
 
     compile files('libs/BaiduLBS_Android.jar')
     compile project(':Module_Music')

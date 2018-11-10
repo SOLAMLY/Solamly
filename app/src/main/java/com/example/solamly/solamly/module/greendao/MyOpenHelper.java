@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.solamly.solamly.Util.MyLog;
 import com.greendao.gen.BehaviorBeanDao;
 import com.greendao.gen.DaoMaster;
+import com.greendao.gen.FileBeanDao;
 import com.greendao.gen.IconBeanDao;
 import com.greendao.gen.PersonalBeanDao;
 import com.greendao.gen.UserBeanDao;
@@ -110,6 +111,20 @@ public class MyOpenHelper extends DaoMaster.OpenHelper {
             case 19:
                 migrate(db, IconBeanDao.class);
                 migrate(db, UserBeanDao.class);
+                break;
+            /**
+             * Version - 20
+             *
+             * 创建表 FileBean
+             */
+            case 20:
+                FileBeanDao.createTable(db, true);
+                break;
+            /**
+             * FileBean表添加主键
+             */
+            case 21:
+                migrate(db, FileBeanDao.class);
                 break;
         }
 

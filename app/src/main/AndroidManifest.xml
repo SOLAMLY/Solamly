@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.solamly.solamly">
+    <!--//允许sd卡读写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!--//获取设备网络状态，禁用后无法获取网络状态-->
@@ -13,8 +15,7 @@
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <!--//获取设备的网络状态，鉴权所需网络代理-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--//允许sd卡写权限，需写入地图数据，禁用后无法显示地图-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <!--//获取统计数据-->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!--//使用步行AR导航，配置Camera权限-->
@@ -57,7 +58,7 @@
         <activity android:name=".ui.EditText.EditTextMainActivity"/>
         <activity android:name=".module.sqlite.SqliteActivity"/>
         <activity android:name=".module.greendao.GreenDaoActivity"/>
-        <activity android:name=".module.http_url_client.HttpActivity"/>
+        <activity android:name=".module.network.HttpActivity"/>
         <activity android:name=".module.rxjava_retrofit.RxJavaMainActivity"/>
         <activity android:name=".module.dagger.DaggerMainActivity"/>
         <activity android:name=".module.XmlAnalysis.JsonXmlActivity"/>
@@ -66,6 +67,10 @@
         <activity android:name=".module.service.ServiceActivity"/>
        <activity android:name=".module.design_mode.factory.FactoryActivity"/>
         <activity android:name=".module.baidu_map.BaiduMapActivity"/>
+
+        <service android:enabled="true" android:name=".module.download.DownloadService" />
+
+        <activity android:name=".module.download.DownloadActivity"/>
         <activity
             android:configChanges="orientation|screenSize"
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />
@@ -78,6 +83,8 @@
 
 
         <service android:name=".module.service.TestService" />
+
+        <activity android:name=".ui.activity.SeekBarTestActivity"/>
     </application>
 
 </manifest>

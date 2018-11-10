@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.module.http_url_client.Retrofit;
+package com.example.solamly.solamly.module.network.Retrofit;
 
 import java.util.List;
 

@@ -2,8 +2,8 @@ package com.example.solamly.solamly.module.rxjava;
 
 import android.database.Observable;
 
-import com.example.solamly.solamly.module.http_url_client.Retrofit.CommentBean;
-import com.example.solamly.solamly.module.http_url_client.Retrofit.TestBean;
+import com.example.solamly.solamly.module.network.Retrofit.CommentBean;
+import com.example.solamly.solamly.module.network.Retrofit.TestBean;
 
 import retrofit2.http.GET;
 

@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.module.rxjava_retrofit;
 
-import com.example.solamly.solamly.module.http_url_client.Retrofit.CommentBean;
+import com.example.solamly.solamly.module.network.Retrofit.CommentBean;
 
 import java.util.List;
 

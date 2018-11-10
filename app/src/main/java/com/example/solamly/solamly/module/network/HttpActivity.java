@@ -1,4 +1,4 @@
-package com.example.solamly.solamly.module.http_url_client;
+package com.example.solamly.solamly.module.network;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.example.solamly.solamly.Base.BaseActivity;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.module.http_url_client.OKHttp.OKHttp3Util;
+import com.example.solamly.solamly.module.network.OKHttp.OKHttp3Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,12 +22,12 @@ import me.nereo.multi_image_selector.MultiImageSelector;
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
 
 import static com.example.solamly.solamly.Util.ToolUtil.getPath;
-import static com.example.solamly.solamly.module.http_url_client.HttpUtil.METHOD_GET;
-import static com.example.solamly.solamly.module.http_url_client.HttpUtil.METHOD_POST;
-import static com.example.solamly.solamly.module.http_url_client.HttpUtil.setUrlConnection;
-import static com.example.solamly.solamly.module.http_url_client.Retrofit.RetrofitUtil.postRetrofitM;
-import static com.example.solamly.solamly.module.http_url_client.Retrofit.RetrofitUtil.postRetrofitUpload;
-import static com.example.solamly.solamly.module.http_url_client.Retrofit.RetrofitUtil.postRetrofitUploadLlist;
+import static com.example.solamly.solamly.module.network.HttpUtil.METHOD_GET;
+import static com.example.solamly.solamly.module.network.HttpUtil.METHOD_POST;
+import static com.example.solamly.solamly.module.network.HttpUtil.setUrlConnection;
+import static com.example.solamly.solamly.module.network.Retrofit.RetrofitUtil.postRetrofitM;
+import static com.example.solamly.solamly.module.network.Retrofit.RetrofitUtil.postRetrofitUpload;
+import static com.example.solamly.solamly.module.network.Retrofit.RetrofitUtil.postRetrofitUploadLlist;
 
 /**
  * @Author SOLAMLY

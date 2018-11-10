@@ -101,9 +101,9 @@ public class GreenDaoActivity extends BaseActivity {
 
     public UserBean getUserBean() {
         UserBean userBean = new UserBean();
-        userBean.setId(count);
+        userBean.setId(0);
         userBean.setName(editText.getText().toString());
-        userBean.setAge("Age" + count);
+        userBean.setAge("Age" + 1101010);
         userBean.setSex("Sex" + count);
         count++;
         return userBean;

@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion 25
-    buildToolsVersion "27.0.3"
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 16
@@ -31,6 +31,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:25.+'
     testCompile 'junit:junit:4.12'
 
@@ -41,6 +42,6 @@ dependencies {
     //配置ARouter
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
-    compile project(':Module_Base')
+    compile  project(':Module_Base')
 
 }

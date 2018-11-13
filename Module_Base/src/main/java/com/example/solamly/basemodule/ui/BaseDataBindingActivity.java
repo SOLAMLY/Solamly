@@ -7,7 +7,6 @@ import android.databinding.ViewDataBinding;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -28,7 +27,7 @@ import butterknife.Unbinder;
  * @Description: 适用于DataBinding
  */
 
-public abstract class BaseDataBindingActivity extends AppCompatActivity {
+public abstract class BaseDataBindingActivity extends Activity {
     private final String TAG = this.getClass().getSimpleName();
     protected ViewDataBinding mViewDataBinding;
     Unbinder mUnbinder;

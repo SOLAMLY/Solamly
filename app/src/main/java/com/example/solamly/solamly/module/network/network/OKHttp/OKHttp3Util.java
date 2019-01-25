@@ -3,7 +3,7 @@ package com.example.solamly.solamly.module.network.network.OKHttp;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.solamly.solamly.module.BaseApplication;
+import com.example.solamly.basemodule.BaseModelApplication;
 
 import java.io.File;
 import java.io.IOException;
@@ -151,7 +151,7 @@ public class OKHttp3Util {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Log.e(TAG, "Result" + response.body().string());
-                Toast.makeText(BaseApplication.getContext(), "上传成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BaseModelApplication.getContext(), "上传成功", Toast.LENGTH_SHORT).show();
             }
         });
     }

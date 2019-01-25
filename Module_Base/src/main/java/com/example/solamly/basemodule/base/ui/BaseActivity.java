@@ -27,9 +27,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initStatusBar();
-
         setContentView(setLayout());
+        initStatusBar();
         ButterKnife.bind(this);
         Log.e(TAG,"--------- onCreate");
 //        if (!EventBus.getDefault().isRegistered(this)) {

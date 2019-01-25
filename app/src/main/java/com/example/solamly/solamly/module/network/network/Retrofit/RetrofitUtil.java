@@ -3,7 +3,7 @@ package com.example.solamly.solamly.module.network.network.Retrofit;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.solamly.solamly.module.BaseApplication;
+import com.example.solamly.basemodule.BaseModelApplication;
 import com.example.solamly.solamly.module.network.network.OKHttp.LoggerInterceptor;
 
 import java.io.File;
@@ -71,7 +71,7 @@ public class RetrofitUtil {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     Log.e(TAG, "请求结果返回:" + response.body().string());
-                    Toast.makeText(BaseApplication.getContext(), "请求结果返回" +  response.body(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BaseModelApplication.getContext(), "请求结果返回" +  response.body(), Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -126,7 +126,7 @@ public class RetrofitUtil {
             @Override
             public void onResponse(Call<CommentBean> call, Response<CommentBean> response) {
                 Log.e(TAG, "请求结果返回:" + response.body());
-                Toast.makeText(BaseApplication.getContext(), "请求结果返回:" +  response.body(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(BaseModelApplication.getContext(), "请求结果返回:" +  response.body(), Toast.LENGTH_SHORT).show();
 
             }
 

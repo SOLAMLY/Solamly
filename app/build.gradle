@@ -46,7 +46,6 @@ android {
 }
 
 dependencies {
-    compile files('libs/BaiduLBS_Android.jar')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -62,7 +61,6 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     //GreenDao
     compile 'org.greenrobot:greendao:3.2.2'
-    compile files('libs/BaiduLBS_Android.jar')
     compile project(':Module_Music')
     compile project(':Module_Base')
     implementation 'com.android.support:support-v4:25.3.0'

@@ -33,6 +33,11 @@ android {
     dataBinding {
         enabled = true
     }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
 
 }
 
@@ -44,7 +49,6 @@ dependencies {
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:25.+'
     compile 'com.android.support:support-v4:25.4.0'
-
     testCompile 'junit:junit:4.12'
     //RecycleView
     compile 'com.android.support:recyclerview-v7:25.4.0'
@@ -95,6 +99,7 @@ dependencies {
     compile 'com.orhanobut:logger:2.1.1'
     compile 'com.xw.repo:bubbleseekbar:3.19'
     compile 'com.ruffian.library:RWidgetHelper:1.0.2'
-
     compile 'me.relex:circleindicator:2.1.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/IndoorscapeAlbumPlugin.jar')
 }

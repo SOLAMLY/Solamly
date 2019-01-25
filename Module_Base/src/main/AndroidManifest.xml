@@ -3,8 +3,11 @@
 
     <application android:allowBackup="true"
                  android:label="@string/app_name"
-                 android:supportsRtl="true"
-    >
+                 android:supportsRtl="true">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="VegGeo65A32GGzDhdSszEwXwSotWQDfG"/>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
     </application>
 
 </manifest>

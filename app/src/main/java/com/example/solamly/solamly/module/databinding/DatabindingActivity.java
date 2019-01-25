@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.module.databinding;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 /**
@@ -25,8 +25,5 @@ public class DatabindingActivity extends BaseActivity{
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 }

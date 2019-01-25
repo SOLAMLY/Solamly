@@ -19,10 +19,10 @@ import android.view.ViewTreeObserver;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.imageloader.BitmapUtil;
+import com.example.solamly.basemodule.util.other.MeasurementUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.imageloader.BitmapDrawableUtil;
-import com.example.solamly.solamly.Util.MeasurementUtil;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -71,10 +71,6 @@ public class MediaRealeaseActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     /**
      * 得到插入图片的SpannableString
@@ -269,7 +265,7 @@ public class MediaRealeaseActivity extends BaseActivity {
         public Drawable getDrawable(String source) {
             Drawable drawable = null;
             drawable = Drawable.createFromPath(source);
-            Bitmap bitmap = BitmapDrawableUtil.drawableToBitmap(drawable);
+            Bitmap bitmap = BitmapUtil.drawableToBitmap(drawable);
             int[] bitmapSize = MeasurementUtil.getImageZoomSize(bitmap, viewWidth);
             drawable.setBounds(0, 0, bitmapSize[0], bitmapSize[1]);
             return drawable;

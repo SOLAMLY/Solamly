@@ -18,9 +18,9 @@ import android.widget.LinearLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.other.MeasurementUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.MeasurementUtil;
 import com.example.solamly.solamly.ui.adapter.CustomBehaviorAdapter;
 import com.example.solamly.solamly.ui.fragment.BasePageFragmentAdapter;
 import com.example.solamly.solamly.ui.fragment.Fragments;
@@ -113,25 +113,21 @@ public class CustomBehaviorActivity extends BaseActivity {
         adapters = new BasePageFragmentAdapter(getSupportFragmentManager(),new String[]{"sd","sdf"},fragments);
         viewPager.setAdapter(adapters);
         tabLayout.setupWithViewPager(viewPager);
-
+        setListener();
     }
 
     @Override
     protected void initData() {
-
-        Glide.with(this)
-                .load(R.mipmap.bg_image)
-                .asBitmap()
-                .centerCrop()
-                .into(imageView);
-
+//        Glide.with(this)
+//                .load(R.mipmap.bg_image)
+//                .centerCrop()
+//                .into(imageView);
         for (int i = 0; i < 50; i++) {
             list.add("我是第" + i + "个");
         }
         adapter.setNewData(list);
     }
 
-    @Override
     protected void setListener() {
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             /**

@@ -3,7 +3,7 @@ package com.example.solamly.solamly.ui.activity;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 import com.xw.repo.BubbleSeekBar;
 
@@ -55,10 +55,7 @@ public class SeekBarTestActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
 
 }

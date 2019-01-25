@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.other.ToastUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.ToastUtil;
 import com.example.solamly.solamly.module.greendao.GreenDaoManager;
 
 import butterknife.BindView;
@@ -81,11 +81,6 @@ public class DownloadActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-
-    }
 
     @Override
     protected void onResume() {

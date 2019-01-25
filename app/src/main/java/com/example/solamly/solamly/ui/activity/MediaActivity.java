@@ -8,10 +8,10 @@ import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.other.MeasurementUtil;
+import com.example.solamly.basemodule.util.other.WebViewClientUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.MeasurementUtil;
-import com.example.solamly.solamly.Util.WebViewClientUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,10 +77,6 @@ public class MediaActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     public void intiImageSelector(){
         MultiImageSelector

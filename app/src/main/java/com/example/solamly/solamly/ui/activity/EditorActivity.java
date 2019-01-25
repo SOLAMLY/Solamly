@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 import com.example.solamly.solamly.ui.EditText.ResizeLinearLayout;
 import com.example.solamly.solamly.ui.weight.RichEditText;
@@ -56,10 +56,7 @@ public class EditorActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
     private ResizeLinearLayout baseContent;
 

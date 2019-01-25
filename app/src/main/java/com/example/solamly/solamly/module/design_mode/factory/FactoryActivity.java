@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.module.design_mode.factory;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 /**
@@ -29,8 +29,4 @@ public class FactoryActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 }

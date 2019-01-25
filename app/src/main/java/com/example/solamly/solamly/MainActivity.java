@@ -6,22 +6,23 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.example.solamly.solamly.Base.BaseActivity;
-import com.example.solamly.solamly.entry.BuliderBean;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.module.AsyncTask.AsyncTaskActivity;
 import com.example.solamly.solamly.module.XmlAnalysis.JsonXmlActivity;
+import com.example.solamly.solamly.module.animation.AnimationActivity;
 import com.example.solamly.solamly.module.baidu_map.BaiduMapActivity;
 import com.example.solamly.solamly.module.dagger.DaggerMainActivity;
 import com.example.solamly.solamly.module.design_mode.factory.FactoryActivity;
 import com.example.solamly.solamly.module.download.DownloadActivity;
 import com.example.solamly.solamly.module.greendao.GreenDaoActivity;
 import com.example.solamly.solamly.module.handler.HandlerMainActivity;
-import com.example.solamly.solamly.module.network.HttpActivity;
-import com.example.solamly.solamly.module.rxjava_retrofit.RxJavaMainActivity;
+import com.example.solamly.solamly.module.network.network.HttpActivity;
+import com.example.solamly.solamly.module.network.rxjava_retrofit.RxJavaMainActivity;
 import com.example.solamly.solamly.module.service.ServiceActivity;
 import com.example.solamly.solamly.ui.activity.CustomBehaviorActivity;
+import com.example.solamly.solamly.ui.activity.HorizonRecycleviewActivity;
 import com.example.solamly.solamly.ui.activity.MediaRealeaseActivity;
-import com.solamly.module_music.view.activity.MusicMainActivity;
+import com.example.solamly.solamly.ui.activity.TestActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +38,7 @@ public class MainActivity extends BaseActivity {
     private List<String> views = new ArrayList<>();
     private final String TAG = this.getClass().getName();
 
-    private String[] length = new String[]{
+    private String[] mStringNames = new String[]{
             "自定义Behavior实现Android知乎首页",
             "JSON + XML 解析",
             "富文本",
@@ -50,9 +51,13 @@ public class MainActivity extends BaseActivity {
             "Service",
             "Factory",
             "百度地图",
-            "音乐",
-            "断点续传"
+            "断点续传",
+            "属性动画",
+            "布局测试",
+            "横线指示器"
     };
+
+    private List<Class> mActivityClass = new ArrayList<>();
 
     @Override
     protected int setLayout() {
@@ -62,7 +67,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
 
-        for (int i = 0; i < length.length; i++) {
+        for (int i = 0; i < mStringNames.length; i++) {
             button = new Button(this);
             button.setText(getTextName(i));
             button.setBackgroundResource(R.drawable.bg_code_btn);
@@ -75,109 +80,50 @@ public class MainActivity extends BaseActivity {
 
             relativeLayout.addView(button);
         }
-
+        setListener();
     }
 
     @Override
     protected void initData() {
+
     }
 
-    @Override
     protected void setListener() {
-        relativeLayout.getChildAt(0).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(CustomBehaviorActivity.class, null);
-//                skip(SeekBarTestActivity.class, null);
 
-            }
-        });
-        relativeLayout.getChildAt(1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(JsonXmlActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(MediaRealeaseActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(GreenDaoActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(HttpActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(RxJavaMainActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(6).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(DaggerMainActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(7).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(HandlerMainActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(8).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(AsyncTaskActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(9).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(ServiceActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(10).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(FactoryActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(11).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(BaiduMapActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(12).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(MusicMainActivity.class, null);
-            }
-        });
-        relativeLayout.getChildAt(13).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skip(DownloadActivity.class, null);
-            }
-        });
+        mActivityClass.add(CustomBehaviorActivity.class);
+        mActivityClass.add(JsonXmlActivity.class);
+        mActivityClass.add(MediaRealeaseActivity.class);
+        mActivityClass.add(GreenDaoActivity.class);
+        mActivityClass.add(HttpActivity.class);
+        mActivityClass.add(RxJavaMainActivity.class);
+        mActivityClass.add(DaggerMainActivity.class);
+        mActivityClass.add(HandlerMainActivity.class);
+        mActivityClass.add(AsyncTaskActivity.class);
+        mActivityClass.add(ServiceActivity.class);
+        mActivityClass.add(FactoryActivity.class);
+        mActivityClass.add(BaiduMapActivity.class);
+        mActivityClass.add(DownloadActivity.class);
+        mActivityClass.add(AnimationActivity.class);
+        mActivityClass.add(TestActivity.class);
+        mActivityClass.add(HorizonRecycleviewActivity.class);
+
+
+        for (int i = 0; i < mStringNames.length; i++) {
+            final int finalI = i;
+            relativeLayout.getChildAt(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    skip(mActivityClass.get(finalI), null);
+                }
+            });
+        }
     }
-
 
     public String getTextName(int i) {
 
-        for (int j = 0; j < length.length; j++) {
+        for (int j = 0; j < mStringNames.length; j++) {
             if (j == i) {
-                return length[j];
+                return mStringNames[j];
             }
         }
         return "";
@@ -185,13 +131,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onClick(View view) {
-        BuliderBean.Builder buliderBean = new BuliderBean.Builder();
-        buliderBean
-                .name("")
-                .isOk(true)
-                .build();
-        buliderBean
-                .sex(5)
-                .build();
+
     }
 }

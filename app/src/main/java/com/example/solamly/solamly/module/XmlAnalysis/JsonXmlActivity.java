@@ -3,7 +3,7 @@ package com.example.solamly.solamly.module.XmlAnalysis;
 import android.util.Log;
 import android.view.View;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 import org.json.JSONArray;
@@ -42,10 +42,7 @@ public class JsonXmlActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
     @OnClick({
             R.id.json_array,

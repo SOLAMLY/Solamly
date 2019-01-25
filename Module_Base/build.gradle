@@ -17,6 +17,7 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
             }
         }
 
@@ -42,21 +43,23 @@ dependencies {
     })
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:25.+'
+    compile 'com.android.support:support-v4:25.4.0'
+
     testCompile 'junit:junit:4.12'
     //RecycleView
     compile 'com.android.support:recyclerview-v7:25.4.0'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     //    butterknife 配置
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     //Glide
-    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.github.bumptech.glide:glide:4.7.1'
     // 圆形图片框架
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.makeramen:roundedimageview:2.3.0'
     //  刷新加载框架
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5'
     compile 'org.greenrobot:eventbus:3.0.0'
     // 侧滑菜单
     compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
@@ -66,9 +69,9 @@ dependencies {
     // 添加库
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     //OkHttp3
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.squareup.okio:okio:1.7.0'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.16'
     // 必要rxjava2依赖
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     // 必要rxandrroid依赖，切线程时需要用到
@@ -78,18 +81,20 @@ dependencies {
     // 必要依赖，和Rxjava结合必须用到
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     // 必要依赖，解析json字符所用
-    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
     //ConverterFactory的String依赖包
-    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     //非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
     //dagger2
     compile 'com.google.dagger:dagger:2.14.1'
     annotationProcessor "com.google.dagger:dagger-compiler:2.14.1"
     //配置ARouter
     compile('com.alibaba:arouter-api:1.3.1') { exclude group: 'com.android.support' }
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
-    compile 'com.orhanobut:logger:1.15'
+    compile 'com.orhanobut:logger:2.1.1'
     compile 'com.xw.repo:bubbleseekbar:3.19'
-    implementation 'com.android.support:support-v4:25.4.0'
+    compile 'com.ruffian.library:RWidgetHelper:1.0.2'
+
+    compile 'me.relex:circleindicator:2.1.0'
 }

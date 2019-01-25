@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 import butterknife.BindView;
@@ -56,10 +56,7 @@ public class SqliteActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
     private void insert(SQLiteDatabase db) {
         //第一种

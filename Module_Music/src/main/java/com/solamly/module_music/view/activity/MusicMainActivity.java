@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.example.solamly.basemodule.ui.BaseDataBindingActivity;
+import com.example.solamly.basemodule.base.ui.BaseDataBindingActivity;
 import com.example.solamly.musicmodule.R;
 import com.example.solamly.musicmodule.R2;
 

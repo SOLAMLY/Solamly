@@ -4,9 +4,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.other.MyLog;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.MyLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,10 +38,6 @@ public class GreenDaoActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     @OnClick({
             R.id.add,

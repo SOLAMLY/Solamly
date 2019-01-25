@@ -9,14 +9,15 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.imageloader.BitmapUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.imageloader.BitmapUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.example.solamly.solamly.Util.imageloader.BitmapDrawableUtil.drawableToBitmap;
+import static com.example.solamly.basemodule.util.imageloader.BitmapUtil.drawableToBitmap;
+
 
 /**
  * @Author SOLAMLY
@@ -112,10 +113,7 @@ public class HandlerMainActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
     private boolean isClick = true;
 

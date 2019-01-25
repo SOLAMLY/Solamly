@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.solamly.solamly.Base.BaseFragment;
+import com.example.solamly.basemodule.base.ui.BaseFragment;
 import com.example.solamly.solamly.R;
 import com.example.solamly.solamly.ui.adapter.CustomBehaviorAdapter;
 

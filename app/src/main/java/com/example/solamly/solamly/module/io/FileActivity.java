@@ -1,14 +1,10 @@
 package com.example.solamly.solamly.module.io;
 
-import android.content.Context;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -38,10 +34,6 @@ public class FileActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     @OnClick({
             R.id.btn_save,

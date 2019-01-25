@@ -3,9 +3,9 @@ package com.example.solamly.solamly.ui.activity;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.other.MeasurementUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.MeasurementUtil;
 
 import butterknife.BindView;
 
@@ -35,10 +35,4 @@ public class MRichEditorActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-
-
-    }
 }

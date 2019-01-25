@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.solamly.solamly.Base.BaseFragment;
+import com.example.solamly.basemodule.base.ui.BaseFragment;
 import com.example.solamly.solamly.R;
 
 import java.io.File;

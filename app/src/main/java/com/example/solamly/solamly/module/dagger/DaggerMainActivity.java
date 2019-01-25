@@ -2,14 +2,14 @@ package com.example.solamly.solamly.module.dagger;
 
 import android.util.Log;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 import javax.inject.Inject;
 
 import okhttp3.OkHttpClient;
 
-import static com.example.solamly.solamly.Base.baseConstant.TAG_DAGGER;
+import static com.example.solamly.basemodule.base.ui.BaseConstant.TAG_DAGGER;
 
 /**
  * @Author SOLAMLY
@@ -39,8 +39,5 @@ public class DaggerMainActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 }

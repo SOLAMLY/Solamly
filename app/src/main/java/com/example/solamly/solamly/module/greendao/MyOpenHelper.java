@@ -3,7 +3,7 @@ package com.example.solamly.solamly.module.greendao;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.solamly.solamly.Util.MyLog;
+import com.example.solamly.basemodule.util.other.MyLog;
 import com.greendao.gen.BehaviorBeanDao;
 import com.greendao.gen.DaoMaster;
 import com.greendao.gen.FileBeanDao;
@@ -14,6 +14,7 @@ import com.greendao.gen.UserBeanDao;
 import org.greenrobot.greendao.database.Database;
 
 import static com.example.solamly.solamly.module.greendao.IMigrationHelper.migrate;
+
 
 /**
  * @Author SOLAMLY

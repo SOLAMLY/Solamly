@@ -35,7 +35,7 @@
 
 
     <application
-        android:name=".BaseApplication"
+        android:name=".module.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -51,6 +51,7 @@
         <!--实现知乎首页-->
         <activity android:name=".ui.activity.CustomBehaviorActivity"/>
         <activity android:name=".ui.activity.FrameActivity"/>
+        <activity android:name=".ui.activity.HorizonRecycleviewActivity"/>
         <activity android:name=".ui.activity.MRichEditorActivity"/>
         <activity android:name=".ui.activity.MediaActivity"/>
         <activity android:name=".ui.activity.MediaRealeaseActivity"/>
@@ -58,8 +59,8 @@
         <activity android:name=".ui.EditText.EditTextMainActivity"/>
         <activity android:name=".module.sqlite.SqliteActivity"/>
         <activity android:name=".module.greendao.GreenDaoActivity"/>
-        <activity android:name=".module.network.HttpActivity"/>
-        <activity android:name=".module.rxjava_retrofit.RxJavaMainActivity"/>
+        <activity android:name=".module.network.network.HttpActivity"/>
+        <activity android:name=".module.network.rxjava_retrofit.RxJavaMainActivity"/>
         <activity android:name=".module.dagger.DaggerMainActivity"/>
         <activity android:name=".module.XmlAnalysis.JsonXmlActivity"/>
         <activity android:name=".module.handler.HandlerMainActivity"/>
@@ -85,6 +86,8 @@
         <service android:name=".module.service.TestService" />
 
         <activity android:name=".ui.activity.SeekBarTestActivity"/>
+        <activity android:name=".module.animation.AnimationActivity"/>
+        <activity android:name=".ui.activity.TestActivity"/>
     </application>
 
 </manifest>

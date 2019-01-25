@@ -3,7 +3,7 @@ package com.example.solamly.solamly.module.service;
 import android.content.Intent;
 import android.view.View;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 
 import butterknife.OnClick;
@@ -32,10 +32,6 @@ public class ServiceActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     @OnClick({
             R.id.btn_service

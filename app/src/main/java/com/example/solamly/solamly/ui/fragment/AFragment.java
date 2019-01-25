@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.ui.fragment;
 
-import com.example.solamly.solamly.Base.BaseFragment;
+import com.example.solamly.basemodule.base.ui.BaseFragment;
 import com.example.solamly.solamly.R;
 
 /**

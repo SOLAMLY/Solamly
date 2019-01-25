@@ -1,6 +1,6 @@
 package com.example.solamly.solamly.ui.activity;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 import com.example.solamly.solamly.ui.fragment.AFragment;
 import com.example.solamly.solamly.ui.fragment.BFragment;
@@ -32,8 +32,5 @@ public class FrameActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:background="#66ccff"
+        android:layout_height="200dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.v7.widget.RecyclerView
+   android:visibility="gone"
+        android:id="@+id/rv_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/progress_circular"
+        app:ci_width="13dp"
+        app:ci_height="2dp"
+        app:ci_drawable="@drawable/mall_shape_classify_indicator"
+        app:ci_drawable_unselected="@drawable/mall_shape_classify_indicator_unselected"
+        android:layout_width="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_height="30dp">
+
+    </me.relex.circleindicator.CircleIndicator>
+</RelativeLayout>

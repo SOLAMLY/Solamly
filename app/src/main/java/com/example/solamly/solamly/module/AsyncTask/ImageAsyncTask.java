@@ -5,10 +5,10 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.solamly.solamly.Util.imageloader.BitmapUtil;
-import com.example.solamly.solamly.Util.imageloader.LruCacheUtil;
-import com.example.solamly.solamly.Util.MeasurementUtil;
-import com.example.solamly.solamly.module.network.HttpUtil;
+import com.example.solamly.basemodule.util.imageloader.BitmapUtil;
+import com.example.solamly.basemodule.util.imageloader.LruCacheUtil;
+import com.example.solamly.basemodule.util.other.MeasurementUtil;
+import com.example.solamly.solamly.module.network.network.HttpUtil;
 
 import java.util.Arrays;
 

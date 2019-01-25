@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
+import com.example.solamly.basemodule.util.imageloader.LruCacheUtil;
 import com.example.solamly.solamly.R;
-import com.example.solamly.solamly.Util.imageloader.LruCacheUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -53,10 +53,7 @@ public class AsyncTaskActivity extends BaseActivity implements ImageAsyncTask.On
     protected void initData() {
     }
 
-    @Override
-    protected void setListener() {
 
-    }
 
     @OnClick({
             R.id.btn_start

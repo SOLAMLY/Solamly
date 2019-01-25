@@ -4,7 +4,7 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
-import static com.example.solamly.solamly.Base.baseConstant.TAG_DAGGER;
+import static com.example.solamly.basemodule.base.ui.BaseConstant.TAG_DAGGER;
 
 /**
  * @Author SOLAMLY

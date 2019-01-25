@@ -2,8 +2,6 @@ package com.example.solamly.solamly.module.XmlAnalysis;
 
 import android.util.Log;
 
-import com.example.solamly.solamly.Util.ToastUtil;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

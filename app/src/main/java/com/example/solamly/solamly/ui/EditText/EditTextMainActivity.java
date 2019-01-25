@@ -11,7 +11,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 
-import com.example.solamly.solamly.Base.BaseActivity;
+import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
 import com.example.solamly.solamly.ui.EditText.RichTextEditor.EditData;
 import com.example.solamly.solamly.ui.activity.MediaActivity;
@@ -71,10 +71,6 @@ public class EditTextMainActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void setListener() {
-
-    }
 
     private static final int REQUEST_CODE_PICK_IMAGE = 1023;
     private static final int REQUEST_CODE_CAPTURE_CAMEIA = 1022;

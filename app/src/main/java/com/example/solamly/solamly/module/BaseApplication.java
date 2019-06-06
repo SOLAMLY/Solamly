@@ -7,6 +7,8 @@ import com.example.solamly.solamly.module.network.network.Retrofit.RetrofitUtil;
 import com.example.solamly.solamly.module.network.rxjava_retrofit.NetManager;
 import com.solamly.module_music.retrofit.RetrofitConfig;
 
+import org.xutils.x;
+
 
 /**
  * @Author SOLAMLY
@@ -31,7 +33,7 @@ public class BaseApplication extends BaseModelApplication {
         RetrofitUtil.initRetrofit2();
         RetrofitConfig.initRetrofit();
         NetManager.getInstance().initRetrofit();
-
+        x.Ext.init(this);
         initArouter();
     }
 

@@ -102,4 +102,6 @@ dependencies {
     compile 'me.relex:circleindicator:2.1.0'
     implementation files('libs/BaiduLBS_Android.jar')
     implementation files('libs/IndoorscapeAlbumPlugin.jar')
+
+    compile 'org.xutils:xutils:3.5.1'
 }

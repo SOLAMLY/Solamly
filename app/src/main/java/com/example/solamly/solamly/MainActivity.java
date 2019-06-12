@@ -19,7 +19,6 @@ import com.example.solamly.solamly.module.handler.HandlerMainActivity;
 import com.example.solamly.solamly.module.network.network.HttpActivity;
 import com.example.solamly.solamly.module.network.rxjava_retrofit.RxJavaMainActivity;
 import com.example.solamly.solamly.module.service.ServiceActivity;
-import com.example.solamly.solamly.module.xUtils.XUtilsHttpActivity;
 import com.example.solamly.solamly.ui.activity.CustomBehaviorActivity;
 import com.example.solamly.solamly.ui.activity.HorizonRecycleviewActivity;
 import com.example.solamly.solamly.ui.activity.MediaRealeaseActivity;
@@ -55,7 +54,7 @@ public class MainActivity extends BaseActivity {
             "断点续传",
             "属性动画",
             "布局测试",
-            "xUtils"
+            "横线指示器"
     };
 
     private List<Class> mActivityClass = new ArrayList<>();
@@ -106,8 +105,7 @@ public class MainActivity extends BaseActivity {
         mActivityClass.add(DownloadActivity.class);
         mActivityClass.add(AnimationActivity.class);
         mActivityClass.add(TestActivity.class);
-//        mActivityClass.add(HorizonRecycleviewActivity.class);
-        mActivityClass.add(XUtilsHttpActivity.class);
+        mActivityClass.add(HorizonRecycleviewActivity.class);
 
 
         for (int i = 0; i < mStringNames.length; i++) {

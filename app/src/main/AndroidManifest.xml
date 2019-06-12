@@ -85,7 +85,6 @@
         <activity android:name=".ui.activity.SeekBarTestActivity"/>
         <activity android:name=".module.animation.AnimationActivity"/>
         <activity android:name=".ui.activity.TestActivity"/>
-        <activity android:name=".module.xUtils.XUtilsHttpActivity"/>
     </application>
 
 </manifest>

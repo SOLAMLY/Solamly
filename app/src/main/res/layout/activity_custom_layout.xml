@@ -7,14 +7,21 @@
 
     <View
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="30dp"/>
 
     <TextView
         android:id="@+id/tv_100dp"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="100dp"
         android:gravity="center"
         />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

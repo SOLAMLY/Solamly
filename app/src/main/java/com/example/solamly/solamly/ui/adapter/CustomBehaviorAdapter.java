@@ -24,20 +24,20 @@ public class CustomBehaviorAdapter extends BaseQuickAdapter<String,BaseViewHolde
 
     @Override
     protected void convert(final BaseViewHolder helper, final String item) {
-        helper.setText(R.id.tv_item_custom_behavior_content,item);
-
-        helper.setOnClickListener(R.id.tv_item_custom_behavior_right, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                remove(helper.getAdapterPosition());
-            }
-        });
-
-        helper.setOnClickListener(R.id.tv_item_custom_behavior_left, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-            }
-        });
+//        helper.setText(R.id.tv_item_custom_behavior_content,item);
+//
+//        helper.setOnClickListener(R.id.tv_item_custom_behavior_right, new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                remove(helper.getAdapterPosition());
+//            }
+//        });
+//
+//        helper.setOnClickListener(R.id.tv_item_custom_behavior_left, new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
     }
 }

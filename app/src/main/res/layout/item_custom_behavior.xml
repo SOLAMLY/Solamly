@@ -5,43 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
-        android:id="@+id/swipe_menu_item_custom_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:contentView="@+id/tv_item_custom_behavior_content"
-        app:leftMenuView="@+id/tv_item_custom_behavior_left"
-        app:rightMenuView="@+id/tv_item_custom_behavior_right"
-        >
-        <TextView
-            android:id="@+id/tv_item_custom_behavior_left"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:background="#66ccff"
-            android:text="左"
-            android:textColor="@color/black"
-            android:textSize="15dp"/>
+    <!--<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout-->
+        <!--android:id="@+id/swipe_menu_item_custom_behavior"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:contentView="@+id/tv_item_custom_behavior_content"-->
+        <!--app:leftMenuView="@+id/tv_item_custom_behavior_left"-->
+        <!--app:rightMenuView="@+id/tv_item_custom_behavior_right"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_item_custom_behavior_left"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:background="#66ccff"-->
+            <!--android:text="左"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_item_custom_behavior_content"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="15dp"/>
+        <!--<TextView-->
+            <!--android:id="@+id/tv_item_custom_behavior_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_item_custom_behavior_right"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:background="#66ccff"
-            android:text="右"
-            android:textColor="@color/black"
-            android:textSize="15dp"/>
+        <!--<TextView-->
+            <!--android:id="@+id/tv_item_custom_behavior_right"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:background="#66ccff"-->
+            <!--android:text="右"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15dp"/>-->
 
 
-    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+    <!--</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>-->
 
 </RelativeLayout>

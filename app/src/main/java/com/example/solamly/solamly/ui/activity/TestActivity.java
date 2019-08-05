@@ -73,20 +73,14 @@ public class TestActivity extends BaseActivity {
 
         Drawable mDrawable = getResources().getDrawable(R.drawable.ui_shape_circle_white);
 
-        int circleWidth = mBitmap.getWidth() * 102 / 294;         //白色圆形背景宽度
+        int circleWidth = mBgBitmap.getWidth() * 102 / 294;         //白色圆形背景宽度
         Bitmap whiteBitmap = getWhiteCircleBgBitmap(mDrawable, circleWidth, circleWidth);
 
 
         int top = mBgBitmap.getHeight() * 335 / 523;
         Bitmap mBitmap1 = combineBitmap(mBgBitmap, whiteBitmap,  top);
 
-        int widthQr = mBgBitmap.getWidth() * 90 / 294;
-        int top1 = mBitmap1.getHeight() * 340 / 523;
-
-        mBitmap = getQrCodeImage(widthQr, widthQr, "http://www.51jxc.cn/download/kdb.html?FromName=KCode&FromValues=13192294609");
-
-        Bitmap mBitmap2 = combineBitmap(mBitmap1, mBitmap,  top1);
-        mImageView.setImageBitmap(mBitmap2);
+        mImageView.setImageBitmap(mBitmap1);
     }
 
     /**
@@ -103,67 +97,37 @@ public class TestActivity extends BaseActivity {
         return mBitmap;
     }
 
+
     /**
      * 合并Bitmap
      *
      * @param background 背景图
      * @param foreground
-     * @param left       foreground生成时的左边距
      * @param top        foreground生成时的上边距
      * @return
      */
     public static Bitmap combineBitmap(Bitmap background, Bitmap foreground,  int top) {
         int left = (background.getWidth() - foreground.getWidth()) / 2;
-        Bitmap newmap = Bitmap.createBitmap(background.getWidth(), background.getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(newmap);
+        /* 问题： 两张bitmap合成后会出现错位(在另一个demo里测试时不会，在这个项目则出现了错位)
+         * 解决方法：将Bitmap.createBitmap(width,height,Bitmap.Config) (怀疑是这个方法引起的) 替换成  Bitmap.createBitmap(bitmap,x,y,width,height) [合成后不会错位]
+         * 问题分析：替换成新的方法后直接使用new Canvas(newmap) 会出现个异常 IllegalStateException:Immutable bitmap passed to Canvas constructor
+         * 得到的结论应该:因为不能直接修改res文件,导致了Bitmap.createBitmap(width,height,Bitmap.Config) 获取的bitmap有问题，所以出现了错位的问题
+         *
+         */
+//        Bitmap newmap = Bitmap.createBitmap(background.getWidth(),background.getHeight(),Bitmap.Config.ARGB_8888);
+        Bitmap newmap = Bitmap.createBitmap(background,0,0,background.getWidth(),background.getHeight());
+        Bitmap copyBitmap = newmap;
+        if(!copyBitmap.isMutable()){
+            copyBitmap = newmap.copy(Bitmap.Config.RGB_565, true);
+        }
+        Canvas canvas = new Canvas(copyBitmap);
         canvas.drawBitmap(background, 0, 0, null);
         canvas.drawBitmap(foreground, left, top, null);
         canvas.save(Canvas.ALL_SAVE_FLAG);
         canvas.restore();
-        return newmap;
+        return copyBitmap;
     }
 
-
-    Bitmap mBitmap;
-
-    /**
-     * 生成QR图
-     *
-     * @param QR_WIDTH
-     * @param QR_HEIGHT
-     * @param text
-     * @return
-     * @throws WriterException
-     */
-    public static Bitmap getQrCodeImage(int QR_WIDTH, int QR_HEIGHT, String text) {
-        Bitmap bitmap = null;
-//        try {
-//            // 需要引入core包
-//            QRCodeWriter writer = new QRCodeWriter();
-//            if (text == null || "".equals(text) || text.length() < 1) {
-//                return null;
-//            }
-//            Hashtable<EncodeHintType, Object> hints = new Hashtable<EncodeHintType, Object>();
-//            hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
-//            BitMatrix bitMatrix = new QRCodeWriter().encode(text, BarcodeFormat.QR_CODE, QR_WIDTH, QR_HEIGHT, hints);
-//            int[] pixels = new int[QR_WIDTH * QR_HEIGHT];
-//            for (int y = 0; y < QR_HEIGHT; y++) {
-//                for (int x = 0; x < QR_WIDTH; x++) {
-//                    if (bitMatrix.get(x, y)) {
-//                        pixels[y * QR_WIDTH + x] = 0xff000000;
-//                    } else {
-////                    pixels[y * QR_WIDTH + x] = 0xffffffff;// 解决保存之后一片黑的bug
-//                    }
-//                }
-//            }
-//
-//            bitmap = Bitmap.createBitmap(QR_WIDTH, QR_HEIGHT, Bitmap.Config.ARGB_8888);
-//            bitmap.setPixels(pixels, 0, QR_WIDTH, 0, 0, QR_WIDTH, QR_HEIGHT);
-//        } catch (WriterException e) {
-//            e.printStackTrace();
-//        }
-        return bitmap;
-    }
 
 
     @Override

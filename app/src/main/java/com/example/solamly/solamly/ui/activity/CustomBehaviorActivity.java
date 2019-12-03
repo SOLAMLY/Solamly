@@ -17,11 +17,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.bumptech.glide.Glide;
 import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.basemodule.util.other.MeasurementUtil;
 import com.example.solamly.solamly.R;
 import com.example.solamly.solamly.ui.adapter.CustomBehaviorAdapter;
+import com.example.solamly.solamly.ui.fragment.BFragment;
 import com.example.solamly.solamly.ui.fragment.BasePageFragmentAdapter;
 import com.example.solamly.solamly.ui.fragment.Fragments;
 
@@ -110,7 +110,10 @@ public class CustomBehaviorActivity extends BaseActivity {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new Fragments());
         fragments.add(new Fragments());
-        adapters = new BasePageFragmentAdapter(getSupportFragmentManager(),new String[]{"sd","sdf"},fragments);
+        fragments.add(new Fragments());
+        fragments.add(new Fragments());
+        fragments.add(new BFragment());
+        adapters = new BasePageFragmentAdapter(getSupportFragmentManager(),new String[]{"1","2","3","4","5"},fragments);
         viewPager.setAdapter(adapters);
         tabLayout.setupWithViewPager(viewPager);
         setListener();

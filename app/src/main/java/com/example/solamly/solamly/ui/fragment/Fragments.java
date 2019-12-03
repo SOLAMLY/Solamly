@@ -1,14 +1,15 @@
 package com.example.solamly.solamly.ui.fragment;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Environment;
 import android.support.annotation.WorkerThread;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.solamly.basemodule.base.ui.BaseFragment;
 import com.example.solamly.solamly.R;
+import com.example.solamly.solamly.module.mv.MyViewModel;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -34,18 +35,19 @@ public class Fragments extends BaseFragment {
 
     @Override
     protected void initView() {
+
         textView = (TextView) getActivity().findViewById(R.id.fragment_text);
 
     }
 
     @Override
     protected void initData() {
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveGifImage("https://oss.meibbc.com/BeautifyBreast/file/health/1535350179459.gif");
-            }
-        });
+//        textView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                saveGifImage("https://oss.meibbc.com/BeautifyBreast/file/health/1535350179459.gif");
+//            }
+//        });
     }
 
     @Override

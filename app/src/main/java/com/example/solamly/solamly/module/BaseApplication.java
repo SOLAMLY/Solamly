@@ -1,11 +1,14 @@
 package com.example.solamly.solamly.module;
 
+import android.content.Context;
+import android.support.multidex.MultiDex;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.solamly.basemodule.BaseModelApplication;
 import com.example.solamly.solamly.module.greendao.GreenDaoManager;
 import com.example.solamly.solamly.module.network.network.Retrofit.RetrofitUtil;
 import com.example.solamly.solamly.module.network.rxjava_retrofit.NetManager;
-import com.solamly.module_music.retrofit.RetrofitConfig;
+
 
 
 /**
@@ -17,7 +20,11 @@ import com.solamly.module_music.retrofit.RetrofitConfig;
 public class BaseApplication extends BaseModelApplication {
 
     private static final boolean isDebug = true;
-
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
     @Override
     public void onCreate() {
         super.onCreate();
@@ -29,7 +36,6 @@ public class BaseApplication extends BaseModelApplication {
          * 初始化Retrofit
          */
         RetrofitUtil.initRetrofit2();
-        RetrofitConfig.initRetrofit();
         NetManager.getInstance().initRetrofit();
 
         initArouter();

@@ -54,7 +54,7 @@ public class DownloadActivity extends BaseActivity {
             switch (msg.what) {
                 case DOWN_THREAD_FINISH:
                     Looper.prepare();
-                    ToastUtil.ToastShow("停止下载");
+                    ToastUtil.toast("停止下载");
                     Looper.loop();
                     break;
                 case UPDATE_PROGRESS:
@@ -120,7 +120,7 @@ public class DownloadActivity extends BaseActivity {
                      * 如果当前是已下载完成状态，进行提示
                      */
                     case STATE_FINISH:
-                        ToastUtil.ToastShow("文件已下载");
+                        ToastUtil.toast("文件已下载");
                         break;
                 }
         }

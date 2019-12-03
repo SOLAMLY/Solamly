@@ -7,18 +7,23 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.ViewTreeObserver;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.solamly.basemodule.util.WebViewUtils;
 import com.example.solamly.basemodule.util.other.MeasurementUtil;
 import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.R;
+import com.example.solamly.solamly.module.push.JWebSocketClient;
 //import com.google.zxing.BarcodeFormat;
 //import com.google.zxing.EncodeHintType;
 //import com.google.zxing.WriterException;
 //import com.google.zxing.common.BitMatrix;
 //import com.google.zxing.qrcode.QRCodeWriter;
 
+import java.net.URI;
 import java.util.Hashtable;
 
 import butterknife.BindView;
@@ -43,44 +48,74 @@ public class TestActivity extends BaseActivity {
     protected void initView() {
         mContext = this;
 
-        Log.i("直接获取的宽高" , mTv100dp.getBottom() + ":" + mTv100dp.getTop());
-        mTv100dp.post(new Runnable() {
+//        Log.i("直接获取的宽高" , mTv100dp.getBottom() + ":" + mTv100dp.getTop());
+//        mTv100dp.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.i("放到post里的宽高" , mTv100dp.getBottom() + " :" + mTv100dp.getTop());
+//                Log.i("放到post里的宽高 - 转换后的" , MeasurementUtil.px2dip(mContext,mTv100dp.getBottom()) + " :" +MeasurementUtil.dip2px(mContext,mTv100dp.getTop()));
+//            }
+//        });
+//
+//        mTv100dp.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//            @Override
+//            public void onGlobalLayout() {
+//                mTv100dp.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+//                Log.i("使用ViewTree获取的宽高" , mTv100dp.getBottom() + " :" + mTv100dp.getTop());
+//                Log.i("使用ViewTree获取的宽高 - 转换后的" , MeasurementUtil.px2dip(mContext,mTv100dp.getBottom()) + " :" +MeasurementUtil.dip2px(mContext,mTv100dp.getTop()));
+//
+//            }
+//        });
+//
+//
+//
+//
+//
+//        ImageView mImageView = (ImageView) findViewById(R.id.image);
+//
+//
+//        Bitmap mBgBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ui_bg_generalize_poster);
+//
+//        Drawable mDrawable = getResources().getDrawable(R.drawable.ui_shape_circle_white);
+//
+//        int circleWidth = mBgBitmap.getWidth() * 102 / 294;         //白色圆形背景宽度
+//        Bitmap whiteBitmap = getWhiteCircleBgBitmap(mDrawable, circleWidth, circleWidth);
+//
+//
+//        int top = mBgBitmap.getHeight() * 335 / 523;
+//        Bitmap mBitmap1 = combineBitmap(mBgBitmap, whiteBitmap,  top);
+//
+//        mImageView.setImageBitmap(mBitmap1);
+
+//        WebView webview = (WebView) findViewById(R.id.webView);
+//        webview.loadUrl("http://www.51jxc.cn/index.php/xtgg");
+//        WebViewUtils.setWebViewSettings(  webview);
+//        webview.setWebViewClient(new WebViewClient() {
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                view.loadUrl(url);
+//                return super.shouldOverrideUrlLoading(view, url);
+//            }
+//        });
+
+//        com.tencent.smtt.sdk.WebView mWebView = (com.tencent.smtt.sdk.WebView) findViewById(R.id.twv_test);
+//        mWebView.loadUrl("http://www.51jxc.cn/index.php/xtgg");
+        URI uri = URI.create("ws://echo.websocket.org");
+        JWebSocketClient client = new JWebSocketClient(uri) {
             @Override
-            public void run() {
-                Log.i("放到post里的宽高" , mTv100dp.getBottom() + " :" + mTv100dp.getTop());
-                Log.i("放到post里的宽高 - 转换后的" , MeasurementUtil.px2dip(mContext,mTv100dp.getBottom()) + " :" +MeasurementUtil.dip2px(mContext,mTv100dp.getTop()));
+            public void onMessage(String message) {
+                //message就是接收到的消息
+                Log.e("JWebSClientService", message);
             }
-        });
-
-        mTv100dp.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                mTv100dp.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                Log.i("使用ViewTree获取的宽高" , mTv100dp.getBottom() + " :" + mTv100dp.getTop());
-                Log.i("使用ViewTree获取的宽高 - 转换后的" , MeasurementUtil.px2dip(mContext,mTv100dp.getBottom()) + " :" +MeasurementUtil.dip2px(mContext,mTv100dp.getTop()));
-
-            }
-        });
-
-
-
-
-
-        ImageView mImageView = (ImageView) findViewById(R.id.image);
-
-
-        Bitmap mBgBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ui_bg_generalize_poster);
-
-        Drawable mDrawable = getResources().getDrawable(R.drawable.ui_shape_circle_white);
-
-        int circleWidth = mBgBitmap.getWidth() * 102 / 294;         //白色圆形背景宽度
-        Bitmap whiteBitmap = getWhiteCircleBgBitmap(mDrawable, circleWidth, circleWidth);
-
-
-        int top = mBgBitmap.getHeight() * 335 / 523;
-        Bitmap mBitmap1 = combineBitmap(mBgBitmap, whiteBitmap,  top);
-
-        mImageView.setImageBitmap(mBitmap1);
+        };
+        try {
+            client.connectBlocking();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (client != null && client.isOpen()) {
+            client.send("你好");
+        }
     }
 
     /**

@@ -31,9 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         initStatusBar();
         ButterKnife.bind(this);
         Log.e(TAG,"--------- onCreate");
-//        if (!EventBus.getDefault().isRegistered(this)) {
-//            EventBus.getDefault().register(this);
-//        }
+
         initView();
         initData();
     }

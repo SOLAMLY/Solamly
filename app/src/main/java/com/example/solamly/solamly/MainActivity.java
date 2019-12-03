@@ -16,6 +16,7 @@ import com.example.solamly.solamly.module.design_mode.factory.FactoryActivity;
 import com.example.solamly.solamly.module.download.DownloadActivity;
 import com.example.solamly.solamly.module.greendao.GreenDaoActivity;
 import com.example.solamly.solamly.module.handler.HandlerMainActivity;
+import com.example.solamly.solamly.module.mv.TestsActivity;
 import com.example.solamly.solamly.module.network.network.HttpActivity;
 import com.example.solamly.solamly.module.network.rxjava_retrofit.RxJavaMainActivity;
 import com.example.solamly.solamly.module.service.ServiceActivity;
@@ -23,6 +24,7 @@ import com.example.solamly.solamly.ui.activity.CustomBehaviorActivity;
 import com.example.solamly.solamly.ui.activity.HorizonRecycleviewActivity;
 import com.example.solamly.solamly.ui.activity.MediaRealeaseActivity;
 import com.example.solamly.solamly.ui.activity.TestActivity;
+import com.example.solamly.solamly.ui.activity.TimerTaskActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +56,9 @@ public class MainActivity extends BaseActivity {
             "断点续传",
             "属性动画",
             "布局测试",
-            "横线指示器"
+            "横线指示器",
+            "ViewModel测试",
+            "定时器"
     };
 
     private List<Class> mActivityClass = new ArrayList<>();
@@ -106,6 +110,8 @@ public class MainActivity extends BaseActivity {
         mActivityClass.add(AnimationActivity.class);
         mActivityClass.add(TestActivity.class);
         mActivityClass.add(HorizonRecycleviewActivity.class);
+        mActivityClass.add(TestsActivity.class);
+        mActivityClass.add(TimerTaskActivity.class);
 
 
         for (int i = 0; i < mStringNames.length; i++) {

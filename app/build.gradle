@@ -11,6 +11,8 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         //配置ARouter
@@ -63,9 +65,10 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     //GreenDao
     compile 'org.greenrobot:greendao:3.2.2'
-    compile project(':Module_Music')
     compile project(':Module_Base')
     implementation 'com.android.support:support-v4:25.3.0'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
 }
 
 configurations.all {

@@ -1,15 +1,19 @@
 package com.example.solamly.solamly.ui.fragment;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.solamly.basemodule.base.ui.BaseFragment;
 import com.example.solamly.solamly.R;
+import com.example.solamly.solamly.module.mv.MyViewModel;
 import com.example.solamly.solamly.ui.adapter.CustomBehaviorAdapter;
 
 import java.util.ArrayList;
@@ -45,6 +49,7 @@ public class BFragment extends BaseFragment {
 
     @Override
     protected void initView() {
+        Log.i("TAG","初始化啦");
         adapter = new CustomBehaviorAdapter(data);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
@@ -53,6 +58,7 @@ public class BFragment extends BaseFragment {
         }
         adapter.setNewData(data
         );
+
     }
 
     @Override

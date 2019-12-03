@@ -4,7 +4,11 @@
     <!--//允许sd卡读写权限-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--//获取设备网络状态，禁用后无法获取网络状态-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!--//网络权限，当禁用后，无法进行检索等相关业务-->
@@ -50,9 +54,7 @@
 
         <!--实现知乎首页-->
         <activity android:name=".ui.activity.CustomBehaviorActivity"/>
-        <activity android:name=".ui.activity.FrameActivity"/>
         <activity android:name=".ui.activity.HorizonRecycleviewActivity"/>
-        <activity android:name=".ui.activity.MRichEditorActivity"/>
         <activity android:name=".ui.activity.MediaActivity"/>
         <activity android:name=".ui.activity.MediaRealeaseActivity"/>
         <activity android:name=".ui.activity.EditorActivity"/>
@@ -85,6 +87,8 @@
         <activity android:name=".ui.activity.SeekBarTestActivity"/>
         <activity android:name=".module.animation.AnimationActivity"/>
         <activity android:name=".ui.activity.TestActivity"/>
+        <activity android:name=".module.mv.TestsActivity"/>
+        <activity android:name=".ui.activity.TimerTaskActivity" />
     </application>
 
 </manifest>

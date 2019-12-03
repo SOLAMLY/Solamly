@@ -1,0 +1,18 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- - - - - -  - - - - - - -  - - - - 提交按钮   - - - -  - - - - - - -  - - - - -->
+    <!-- 按钮点击样式 -只有一个的样式 - 圆角 -->
+    <style name="btn_circle_click_effect">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@drawable/ui_selector_click_effect_blue</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>

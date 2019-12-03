@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="OnClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/basemodule_title_bar" />
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="倒计时：" />
+
+        <Button
+            android:id="@+id/btn_rester"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="重置" />
+
+        <Button
+            android:id="@+id/btn_handler_postDelayed"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="Handler+PostDelayed" />
+
+        <Button
+            android:id="@+id/btn_handle_timer"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="Handler + Timer" />
+
+        <Button
+            android:id="@+id/btn_timerTask"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="TimerTask" />
+
+        <Button
+            android:id="@+id/btn_scheduledExecutorService"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="ScheduledExecutorService" />
+        <Button
+            android:id="@+id/btn_rxJavaTimer"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="RxJavaTimer" />
+        <Button
+            android:id="@+id/btn_rxJavaInterval"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="RxJavaInterval" />
+        <Button
+            android:id="@+id/btn_countDownTimer"
+            style="@style/btn_circle_click_effect"
+            android:onClick="@{OnClick}"
+            android:text="CountDownTimer" />
+
+    </LinearLayout>
+</layout>

@@ -89,6 +89,7 @@
         <activity android:name=".ui.activity.TestActivity"/>
         <activity android:name=".module.mv.TestsActivity"/>
         <activity android:name=".ui.activity.TimerTaskActivity" />
+        <activity android:name=".module.aspectJ.AspectTestActivity" />
     </application>
 
 </manifest>

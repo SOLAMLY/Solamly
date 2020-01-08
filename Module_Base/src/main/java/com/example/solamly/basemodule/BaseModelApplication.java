@@ -2,10 +2,17 @@ package com.example.solamly.basemodule;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
+import com.example.solamly.basemodule.constant.Constant;
+import com.example.solamly.basemodule.helpaer.CustomLogCatStrategy;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.FormatStrategy;
+import com.orhanobut.logger.Logger;
+import com.orhanobut.logger.PrettyFormatStrategy;
 import com.tencent.smtt.sdk.QbSdk;
 
 
@@ -33,6 +40,21 @@ public class BaseModelApplication extends Application {
                 //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
                 Log.e("@@","加载内核是否成功:"+b);
             }
+        });
+
+        //Logger初始化
+        FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
+                .methodOffset(7)
+                .logStrategy(new CustomLogCatStrategy())
+                .tag(Constant.TAG)
+                .build();
+        Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy){
+            @Override
+            public boolean isLoggable(int priority, @Nullable String tag) {
+//                return super.isLoggable(priority, tag); //都打印
+                return BuildConfig.DEBUG;           //Debug模式才打印信息
+            }
+
         });
     }
 

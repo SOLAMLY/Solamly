@@ -10,6 +10,7 @@ import com.example.solamly.basemodule.base.ui.BaseActivity;
 import com.example.solamly.solamly.module.AsyncTask.AsyncTaskActivity;
 import com.example.solamly.solamly.module.XmlAnalysis.JsonXmlActivity;
 import com.example.solamly.solamly.module.animation.AnimationActivity;
+import com.example.solamly.solamly.module.aspectJ.AspectTestActivity;
 import com.example.solamly.solamly.module.baidu_map.BaiduMapActivity;
 import com.example.solamly.solamly.module.dagger.DaggerMainActivity;
 import com.example.solamly.solamly.module.design_mode.factory.FactoryActivity;
@@ -58,7 +59,8 @@ public class MainActivity extends BaseActivity {
             "布局测试",
             "横线指示器",
             "ViewModel测试",
-            "定时器"
+            "定时器",
+            "AsepectJ"
     };
 
     private List<Class> mActivityClass = new ArrayList<>();
@@ -112,6 +114,7 @@ public class MainActivity extends BaseActivity {
         mActivityClass.add(HorizonRecycleviewActivity.class);
         mActivityClass.add(TestsActivity.class);
         mActivityClass.add(TimerTaskActivity.class);
+        mActivityClass.add(AspectTestActivity.class);
 
 
         for (int i = 0; i < mStringNames.length; i++) {
